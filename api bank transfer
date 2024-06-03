@@ -1,0 +1,97 @@
+from prometeo import Client # pip install prometeo
+from json import dumps
+
+API_KEY = "<API-KEY>"
+client = Client(API_KEY, environment="sandbox")
+
+
+credentials = {
+    "provider": "USER",
+    "username": "12345",
+    "password": "asdfg"
+}
+
+session = client.banking.login(**credentials)
+
+try:
+    response = session._client.call_api("GET", "/account/", params={
+        "key": session.get_session_key(),
+    })
+    print(dumps(response, indent=4))
+
+    account_number = response["accounts"][0]["number"]
+
+    transfer_data = {
+        'origin_account': account_number,
+        'destination_account': '037069523',
+        'destination_institution': '5600010',
+        'authorization_device_number': '01',
+        'currency': 'USD',
+    }
+
+    response = session._client.call_api('POST', '/transfer/preprocess', data={
+        'origin_account': transfer_data['origin_account'],
+        'destination_institution': transfer_data['destination_institution'],
+        'destination_account': transfer_data['destination_account'],
+        'currency': transfer_data['currency'],
+        'amount': 1,
+        'concept': 'test prometeo',
+        'destination_owner_name': transfer_data.get('destination_owner_name', ''),
+        'branch': transfer_data.get('branch', ''),
+    }, params={'key': session.get_session_key()})
+    print(dumps(response, indent=4))
+
+    otp_value = input('OTP? ')
+    request_id = response['result']['request_id']
+    response = session._client.call_api('POST', '/transfer/confirm', data={
+        'request_id': request_id,
+        'authorization_type': 'otp',
+        'authorization_data': otp_value,
+        'authorization_device_number': transfer_data['authorization_device_number']
+    }, params={'key': session.get_session_key()})
+    print(dumps(response, indent=4))
+finally:
+    session.logout()
+
+
+
+
+
+{
+    "status": "success",
+    "accounts": [
+        {
+            "id": "12345",
+            "name": " Account 1",
+            "number": "12345678",
+            "branch": "",
+            "currency": "USD",
+            "balance": 21000
+        },
+        {
+            "id": "12346",
+            "name": " Account 2",
+            "number": "87654321",
+            "branch": "",
+            "currency": "USD",
+            "balance": 12000
+        }
+    ]
+}
+{
+    "status": "success",
+    "result": {
+        "approved": true,
+        "message": "",
+        "request_id": "c7a55adeb90b4072981d36f4260de6e7",
+        "authorization_devices": []
+    }
+}
+OTP? 123213
+{
+    "status": "success",
+    "transfer": {
+        "success": true,
+        "message": "Operation number: 20856"
+    }
+}
