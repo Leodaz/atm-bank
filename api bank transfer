@@ -1,4 +1,4 @@
-from prometeo import Client # pip install prometeo
+import Client 
 from json import dumps
 
 API_KEY = "<API-KEY>"
