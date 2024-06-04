@@ -1,15 +1,33 @@
 pip instalar jsonlib
+python -m pip install requests
 import Client 
-from json import dumps
+from json 
+import requests
 
-API_KEY = "<API-KEY>"
-client = Client(API_KEY, environment="sandbox")
+url = "https:// test.bitpay.com/payouts"
 
+payload = { "true": true } 
+headers = {
+    "accept": "application/json",
+    "Content-Type": "application/json",
+    "X-Accept-Version": "2.0.0"
+}
+
+response = requests.post(url, json=payload, headers=headers)
+
+print(response.text)
+
+
+
+Bitpay app 
+class amount:
+client = Client
+class Amount = 21000 'currency': 'USD',
 
 credentials = {
     "provider": "USER",
-    "username": "12345",
-    "password": "asdfg"
+    "username": "leonardo Daza Blanco",
+    "password": "7202"
 }
 
 session = client.banking.login(**credentials)
@@ -36,7 +54,7 @@ try:
         'destination_account': transfer_data['destination_account'],
         'currency': transfer_data['currency'],
         'amount': 1,
-        'concept': 'test prometeo',
+        'concept': 'transfer amount',
         'destination_owner_name': transfer_data.get('destination_owner_name', ''),
         'branch': transfer_data.get('branch', ''),
     }, params={'key': session.get_session_key()})
