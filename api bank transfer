@@ -1,3 +1,4 @@
+pip instalar jsonlib
 import Client 
 from json import dumps
 
