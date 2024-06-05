@@ -2,7 +2,7 @@ def  Validar_Usuario ():
 
     Validar_cuenta = input ( "Ingrese Los  Digitos De Su cuenta :" )
     Nick = entrada ( "Digite Su NICK :" )
-    if ( Validar_Tarjeta == "xxxxxxxxxxx"  and  Nick == "7202" ): # CUENTA Bitpay plus
+    if ( Validar_cuenta == "xxxxxxxxxxx"  and  Nick == "7202" ): # Cuenta Bitpay plus
         imprimir ( "***********************" )
         imprimir ( " BIENVENIDO " )
         imprimir ( "***********************" )
@@ -40,7 +40,7 @@ def  Validar_Usuario ():
     demás :
         print ( "LO SENTIMOS...ASEGURESE QUE LOS DATOS SEAN CORRECTOS" ) #termino de la  cuenta
 
-    #elif (Validar_Tarjeta=="501878200078043777" and Nick=="7202"): #SEGUNDA CUENTA
+    #elif (Validar_cuenta=="501878200078043777" and Nick=="7202"): #SEGUNDA CUENTA
      # imprimir("*******************************")
       # print(" BIENVENIDO ")
       # imprimir("*******************************")
