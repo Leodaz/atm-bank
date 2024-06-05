@@ -49,7 +49,7 @@ def  Validar_Usuario ():
 
 
 
-def  Retirar_Tarjeta ():
+def  Indique_su_cuenta ():
     imprimir ( "" )
 
 def  Retirar_Monto ():
