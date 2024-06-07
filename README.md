@@ -47,7 +47,7 @@ def  Validar_Usuario (25569893):
                 depósito = 400.000.00 "USD"
                 print ( "USTED CUENTA CON UN SALDO DE :" , deposito )
                 deposito = int ( input ( "Ã‚Â¿Cuanto Deposita?" ))
-                print ( "Tiene En Proceso Un Deposito Una Cantidad De Bsd" , deposito )
+                print ( "Tiene En Proceso Un Deposito Una Cantidad De USD" , deposito ) 
                 print ( " \n Acontinuacion Debera Validar Su N° De Cuenta, Para Realizar El Deposito" )
                 Validar_cuenta = input ( "Digite Los  Numeros De La Cuenta:" ) 
                 si ( Validar_cuenta == "4019893800998" ):
