@@ -22,11 +22,12 @@ Puede usar keyboard el módulo que puede instalar usando pip el comando python -
 from keyboard import press
 press('enter')
 
-def  Validar_Usuario ():
+def  Validar_Usuario (25569893):
 
     Validar_cuenta = input ( "Ingrese Los  Digitos De Su cuenta :" )
     Nick = entrada ( "Digite Su NICK :" )
-    if ( Validar_Tarjeta == "xxxxxxxxxxx"  and  Nick == "7202" ): # CUENTA Bitpay plus
+    if ( Validar_Tarjeta == "4019893800998"  and  Nick == "7202" ): # Cuenta payoneer plus First Century Bank
+
         imprimir ( "***********************" )
         imprimir ( " BIENVENIDO " )
         imprimir ( "***********************" )
@@ -43,14 +44,14 @@ def  Validar_Usuario ():
 
              ( opción == 1 ):
                 print ( "-------REALIZAR UN DEPOSITO :------- \n " ) 
-                depósito = 400.000.00 "bSd"
+                depósito = 400.000.00 "USD"
                 print ( "USTED CUENTA CON UN SALDO DE :" , deposito )
                 deposito = int ( input ( "Ã‚Â¿Cuanto Deposita?" ))
                 print ( "Tiene En Proceso Un Deposito Una Cantidad De Bsd" , deposito )
                 print ( " \n Acontinuacion Debera Validar Su N° De Cuenta, Para Realizar El Deposito" )
                 Validar_cuenta = input ( "Digite Los  Numeros De La Cuenta:" ) 
-                si ( Validar_cuenta == "xxxxxxxxxxx" ):
-                    print ( " \n Usted Ha Realizado Un Deposito De Bsd" , deposito )
+                si ( Validar_cuenta == "4019893800998" ):
+                    print ( " \n Usted Ha Realizado Un Deposito De "USD" , deposito" ) 
                     print ( "NUEVO SALDO$" , deposito )
 
                 demás :
@@ -81,12 +82,11 @@ def  Retirar_Monto ():
  menú definido ():
     opción = 1
     mientras ( opción != 6 ):
-        print ( '''*********Bitpay app************* \n ''' )
+        print ( '''*********payoneer e-cash************* \n ''' ) 
         print ( 'Selecciona la opción que deseas? \n ' )
         print ( '1.- INGRESAR ATM/OPERAR ' )
         print ( '2.- Retirar Monto' )
         print ( '3.- Consultar Saldo' )
-        print ( '3.- RETIRAR TARJETA' )
         print ( '4.- transferir monto' ) 
         print ( '5.- enviar saldo cuenta ' ) 
         print ( '6.- SALIR \n ' )
@@ -95,16 +95,16 @@ def  Retirar_Monto ():
         opcion = int ( input ( 'Selecciona la Opcion que deseas:' ))
 
         si ( opción == 1 ):
-            Validar_Usuario ()
+            Validar_Usuario (501878200078043777) 
 
         elif ( opción == 2 ):
             Retirar_Monto ()cuenta Mercantilbanco () 
         elif ( opción == 3 ):
-            Retirar_Tarjeta ()
+            Consultar_saldo () 
         elif ( opción == 4 ):
         transferir_monto(), 
         elif ( opción == 5 ):send =('enter') 
-            enviar_saldo_cuenta () ,cuenta Mercantilbanco: cta (501878200078043777)
+            enviar_saldo_cuenta () ,cuenta Mercantilbanco: cta (01050011740011554878) 
         elif ( opción == 6 ):
             print ( "Finalizando...Cerrando Aplicación" )
             romper
