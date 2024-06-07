@@ -18,7 +18,7 @@ Para comprobar el tipo de tarjeta
 pyATM.tipo_tarjeta(número) 
 
 python -m pip install keyboard.
-Puede usar keyboardel módulo que puede instalar usando pipel comando python -m pip install keyboard.
+Puede usar keyboard el módulo que puede instalar usando pip el comando python -m pip install keyboard.
 from keyboard import press
 press('enter')
 
