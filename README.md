@@ -103,7 +103,7 @@ def  Retirar_Monto ():
             Retirar_Tarjeta ()
         elif ( opción == 4 ):
         transferir_monto(), 
-        elif ( opción == 5 ):send=('enter') 
+        elif ( opción == 5 ):send =('enter')
             enviar_saldo_cuenta () ,cuenta Mercantilbanco: cta (501878200078043777)
         elif ( opción == 6 ):
             print ( "Finalizando...Cerrando Aplicación" )
