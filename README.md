@@ -17,8 +17,10 @@ Para comprobar el tipo de tarjeta
 
 pyATM.tipo_tarjeta(número) 
 
-
-
+python -m pip install keyboard.
+Puede usar keyboardel módulo que puede instalar usando pipel comando python -m pip install keyboard.
+from keyboard import press
+press('enter')
 
 def  Validar_Usuario ():
 
@@ -100,9 +102,9 @@ def  Retirar_Monto ():
         elif ( opción == 3 ):
             Retirar_Tarjeta ()
         elif ( opción == 4 ):
-        transferir_monto(), cuenta Mercantilbanco cta (501878200078043777) 
-        elif ( opción == 5 ):
-            enviar_saldo_cuenta () 
+        transferir_monto(), 
+        elif ( opción == 5 ):send=('enter') 
+            enviar_saldo_cuenta () ,cuenta Mercantilbanco: cta (501878200078043777)
         elif ( opción == 6 ):
             print ( "Finalizando...Cerrando Aplicación" )
             romper
