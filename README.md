@@ -42,7 +42,7 @@ def  Validar_Usuario ():
             opcion = int ( input ( 'Selecciona la Opcion que deseas:' ))
 
              ( opción == 1 ):
-                print ( "-------REALISA UN DEPOSITO :------- \n " )
+                print ( "-------REALIZAR UN DEPOSITO :------- \n " ) 
                 depósito = 400.000.00 "bSd"
                 print ( "USTED CUENTA CON UN SALDO DE :" , deposito )
                 deposito = int ( input ( "Ã‚Â¿Cuanto Deposita?" ))
@@ -103,7 +103,7 @@ def  Retirar_Monto ():
             Retirar_Tarjeta ()
         elif ( opción == 4 ):
         transferir_monto(), 
-        elif ( opción == 5 ):send =('enter')
+        elif ( opción == 5 ):send =('enter') 
             enviar_saldo_cuenta () ,cuenta Mercantilbanco: cta (501878200078043777)
         elif ( opción == 6 ):
             print ( "Finalizando...Cerrando Aplicación" )
