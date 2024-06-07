@@ -1,3 +1,25 @@
+usar la version pyATM 0.0.1
+https://pypi.org/project/pyATM/
+pip install pyATM
+
+Descripción de proyecto
+Es una herramienta sencilla que resulta útil para comprobar si la tarjeta del cajero automático es válida o no. Funciona según el algoritmo Lunh.
+
+Instrucciones de uso
+
+Para comprobar si la tarjeta es válida o no
+
+pyATM.card_check()
+
+introduce tu número de tarjeta
+
+Para comprobar el tipo de tarjeta
+
+pyATM.tipo_tarjeta(número) 
+
+
+
+
 def  Validar_Usuario ():
 
     Validar_cuenta = input ( "Ingrese Los  Digitos De Su cuenta :" )
