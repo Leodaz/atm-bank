@@ -1,10 +1,13 @@
+python -m pip install id
+pip install id
+
 pip instalar jsonlib
 python -m pip install requests
 import Client 
 from json 
 import requests
 
-url = "https:// test.bitpay.com/payouts"
+url = "https://bitpay.com/payouts"
 
 payload = { "true": true } 
 headers = {
@@ -22,10 +25,10 @@ print(response.text)
 Bitpay app 
 class amount:
 client = Client
-class Amount = 21000 'currency': 'USD',
+class Amount = 97000.00 'currency': 'USD',
 
 credentials = {
-    "provider": "USER",
+    "provider": "Bitpay_plus_account",
     "username": "leonardo Daza Blanco",
     "password": "7202"
 }
@@ -38,7 +41,7 @@ try:
     })
     print(dumps(response, indent=4))
 
-    account_number = response["accounts"][0]["number"]
+    account_number = response["accounts"][1]["number"]
 
     transfer_data = {
         'origin_account': account_number,
@@ -53,19 +56,19 @@ try:
         'destination_institution': transfer_data['destination_institution'],
         'destination_account': transfer_data['destination_account'],
         'currency': transfer_data['currency'],
-        'amount': 1,
+        'amount': 97000.00,
         'concept': 'transfer amount',
         'destination_owner_name': transfer_data.get('destination_owner_name', ''),
         'branch': transfer_data.get('branch', ''),
     }, params={'key': session.get_session_key()})
     print(dumps(response, indent=4))
 
-    otp_value = input('OTP? ')
+    pin_value = input('pin? ')
     request_id = response['result']['request_id']
     response = session._client.call_api('POST', '/transfer/confirm', data={
         'request_id': request_id,
-        'authorization_type': 'otp',
-        'authorization_data': otp_value,
+        'authorization_type': 'PIN',
+        'authorization_data': pin_value,"password": "7202"
         'authorization_device_number': transfer_data['authorization_device_number']
     }, params={'key': session.get_session_key()})
     print(dumps(response, indent=4))
@@ -81,19 +84,19 @@ finally:
     "accounts": [
         {
             "id": " ",
-            "name": " Account 1",
-            "number": "12345678",
+            "name": " Account 1","Leonardo Daza Blanco"
+            "number": "87964523",
             "branch": "",
             "currency": "USD",
-            "balance": 21000
+            "balance":97000.00
         },
         {
-            "id": " ",
-            "name": " Account 2",
-            "number": " ",
+            "id": "25569893","Payoneer"
+            "name": " Account 2","Leonardo Daza Blanco"
+            "number": "25569893 ",
             "branch": "",
             "currency": "USD",
-            "balance": 12000
+            "balance": 97000.00
         }
     ]
 }
@@ -101,7 +104,7 @@ finally:
     "status": "success",
     "result": {
         "approved": true,
-        "message": "",
+        "message": "success",
         "request_id": "c7a55adeb90b4072981d36f4260de6e7",
         "authorization_devices": []
     }
