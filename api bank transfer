@@ -7,6 +7,12 @@ import Client
 from json 
 import requests
 
+pip install key-generator
+from key_generator.key_generator import generate
+
+key = generate(seed = 101)
+print(key.get_key()) 
+
 url = "https://bitpay.com/payouts"
 
 payload = { "true": true } 
