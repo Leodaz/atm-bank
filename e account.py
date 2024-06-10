@@ -8,6 +8,8 @@ def main():
 "owner_type":"bitpay_account_plus"
 "user_id":"usr-20I2tIqG3buTsvHKKORrtY2MkFH"
 "company_id":"cmp-bitpayMdUfg48A2H2rvoX7CV3toE0Z72fX"
+"user_id":"Leonardo Daza Blanco"
+"id_munber":"V-12.226750"
 "country":"VE"
 "currency":"USD"
 "metadata":{ 
