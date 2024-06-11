@@ -50,9 +50,9 @@ try:
     account_number = response["accounts"][1]["number"]
 
     transfer_data = {
-        'origin_account': account_number,
-        'destination_account': '037069523',
-        'destination_institution': '5600010',
+        'origin_account': account_number,'87964523 ','Bitpay_plus_account'
+        'destination_account': '25569893 ',
+        'destination_institution': '25569893','Payoneer_account'
         'authorization_device_number': '01',
         'currency': 'USD',
     }
@@ -89,12 +89,17 @@ finally:
     "status": "success",
     "accounts": [
         {
-            "id": " ",
-            "name": " Account 1","Leonardo Daza Blanco"
+            "id": "87964523","Bitpay_plus_account"
+            "name": " Account 1 USD ","Leonardo Daza Blanco"
             "number": "87964523",
             "branch": "",
             "currency": "USD",
-            "balance":97000.00
+            "balance":987000.00,
+},
+            "total_tax_money" : {
+              "cantidad" : 0 ,
+              "currency : USD"
+            },
         },
         {
             "id": "25569893","Payoneer"
@@ -102,7 +107,7 @@ finally:
             "number": "25569893 ",
             "branch": "",
             "currency": "USD",
-            "balance": 97000.00
+            "balance": 987000.00
         }
     ]
 }
