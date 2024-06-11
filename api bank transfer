@@ -12,8 +12,8 @@ from key_generator.key_generator import generate
 
 key = generate(seed = 101)
 print(key.get_key()) 
-
-url = "https://bitpay.com/payouts"
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+from json import dumps
 
 payload = { "true": true } 
 headers = {
@@ -47,7 +47,7 @@ try:
     })
     print(dumps(response, indent=4))
 
-    account_number = response["accounts"][1]["number"]
+    account_number = response["accounts"][87964523]["number"]
 
     transfer_data = {
         'origin_account': account_number,'87964523 ','Bitpay_plus_account'
