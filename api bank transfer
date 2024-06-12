@@ -78,11 +78,10 @@ try:
         'authorization_device_number': transfer_data['authorization_device_number']
     }, params={'key': session.get_session_key()})
     print(dumps(response, indent=4))
-elif ( opción == 5 ):send =('enter') 
-    elif ( opción == 6 ):
-        print ( "Finalizando...Cerrando Aplicación" ) 
+
 finally:
     session.logout()
+print ( "Finalizando...Cerrando Aplicación" ) 
 
 
 
