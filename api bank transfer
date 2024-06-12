@@ -31,7 +31,7 @@ print(response.text)
 Bitpay app 
 class amount:
 client = Client
-class Amount = 987000.00 'currency': 'USD',
+class Amount = 15000.00 'currency': 'USD',
 
 credentials = {
     "provider": "Bitpay_plus_account",
@@ -62,7 +62,7 @@ try:
         'destination_institution': transfer_data['destination_institution'],
         'destination_account': transfer_data['destination_account'],
         'currency': transfer_data['currency'],
-        'amount': 987000.00,
+        'amount': 15000.00,
         'concept': 'payment for sale of crypto asset',
         'destination_owner_name': transfer_data.get('destination_owner_name', ''),
         'branch': transfer_data.get('branch', ''),
@@ -97,7 +97,7 @@ finally:
             "number": "87964523",
             "branch": "",
             "currency": "USD",
-            "balance":987000.00,
+            "balance":15000.00,
 },
             "total_tax_money" : {
               "cantidad" : 0 ,
@@ -110,7 +110,7 @@ finally:
             "number": "25569893 ",
             "branch": "",
             "currency": "USD",
-            "balance": 987000.00
+            "balance": 15000.00
         }
     ]
 }
