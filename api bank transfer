@@ -92,7 +92,7 @@ print ( "Finalizando...Cerrando Aplicación" )
     "accounts": [
         {
             "id": "87964523","Bitpay_plus_account"
-            "name": " Account 1 USD ","Leonardo Daza Blanco"
+            "name": " Account 1 ","Leonardo Daza Blanco"
             "number": "87964523",
             "branch": "",
             "currency": "USD",
