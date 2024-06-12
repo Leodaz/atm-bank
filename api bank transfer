@@ -1,7 +1,7 @@
 python -m pip install id
 pip install id
 
-pip instalar jsonlib
+pip install jsonlib
 python -m pip install requests
 import Client 
 from json 
