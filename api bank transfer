@@ -31,7 +31,7 @@ print(response.text)
 Bitpay app 
 class amount:
 client = Client
-class Amount = 97000.00 'currency': 'USD',
+class Amount = 987000.00 'currency': 'USD',
 
 credentials = {
     "provider": "Bitpay_plus_account",
@@ -62,11 +62,11 @@ try:
         'destination_institution': transfer_data['destination_institution'],
         'destination_account': transfer_data['destination_account'],
         'currency': transfer_data['currency'],
-        'amount': 97000.00,
-        'concept': 'transfer amount',
+        'amount': 987000.00,
+        'concept': 'payment for sale of crypto asset',
         'destination_owner_name': transfer_data.get('destination_owner_name', ''),
         'branch': transfer_data.get('branch', ''),
-    }, params={'key': session.get_session_key()})
+    }, params={'key': session.get_session_key()}) 
     print(dumps(response, indent=4))
 
     pin_value = input('pin? ')
@@ -78,6 +78,9 @@ try:
         'authorization_device_number': transfer_data['authorization_device_number']
     }, params={'key': session.get_session_key()})
     print(dumps(response, indent=4))
+elif ( opción == 5 ):send =('enter') 
+    elif ( opción == 6 ):
+        print ( "Finalizando...Cerrando Aplicación" ) 
 finally:
     session.logout()
 
