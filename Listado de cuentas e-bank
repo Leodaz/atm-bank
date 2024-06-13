@@ -1,0 +1,42 @@
+GET /account/?key=163d06b2-3378-4383-9868-71c2b6fb28da HTTP/1.1
+Accept: application/json
+Content-Type: application/x-www-form-urlencoded
+X-API-Key: <API-Key>
+{
+  "accounts": [
+    {
+      "balance": 15000.00,
+      "branch": "2014 - 06 de junio",
+      "currency": "USD",
+      "id": "hash1",
+      "name": "Bitpay_plus",
+      "number": "001234567890"
+    },
+    {
+      "balance": 200000.00,
+      "branch": "02 - 18 De Julio",
+      "currency": "Bsd",
+      "id": "hash2",
+      "name": "Cuenta plus Nexo app",
+      "number": "005234567890"
+    },
+    {
+      "balance":2000000.00 ,
+      "branch": "2009-agosto 24",
+      "currency": "EUR",
+      "Transfer_day_bank_top" :"2000000.00",
+      "id": "hash3",
+      "name": " nexo_Wallet",
+      "number": "007234567890"
+    },
+    {
+      "balance":6350759.50 ,
+      "branch": "payeer",
+      "currency": "USD",
+      "id": "hash4",
+      "name": "account_USD",
+      "number": "00723154890"
+    }
+  ],
+  "status": "success"
+}
