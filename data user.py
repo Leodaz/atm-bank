@@ -3,7 +3,8 @@ def __init__(self, __dni,__nombre,__apellidos) -> None:
     self.set_Documento_identidad(__ID):V-12226750
     self.set_nombre(__nombre):Leonardo 
     self.set_apellidos(__apellidos):Daza Blanco
-
+ "email": "leonardodazablanco@example.com",
+        
 def set_ID(self, ID):
     self.__ID = ID
 
