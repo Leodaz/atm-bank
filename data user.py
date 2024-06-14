@@ -1,10 +1,18 @@
 class Cliente:
 def __init__(self, __dni,__nombre,__apellidos) -> None:
-    self.set_Documento_identidad(__ID):V-12226750
-    self.set_nombre(__nombre):Leonardo 
-    self.set_apellidos(__apellidos):Daza Blanco
- "email": "leonardodazablanco@example.com",
-        
+    self.set_Documento_identidad(__ID):V-12226XXX
+    self.set_nombre(__nombre):XXXXXXXXXXXXX 
+    self.set_apellidos(__apellidos):DXXX BXxxxxx
+ "email": "leonardodaza@example.com",
+  "address": {
+        "street": "Estado M-XXXXXX ,Municipio SxxxxxxE parroquia LXXXXX Martinez ,Urbanizacion Montecristo Xda avenida con Xda transversal casa XXXX ",
+        "suite": "Apt. XXX",
+        "city": "Dtto Metropolitano De Caracas", 
+      "Country": "Venezuela"
+      "balnce": 98745321.00,
+      "currency","USD",
+      "BANK": "Nexo Plataform e bank",
+
 def set_ID(self, ID):
     self.__ID = ID
 
@@ -87,4 +95,6 @@ account_number = response["accounts"][1]["number"]
         'authorization_device_number': '01',
       
         'currency': 'USD',
-      
+       print('Data:', response.json())
+else:
+    print('Error en la solicitud, detalles:', response.text)
