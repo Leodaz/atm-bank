@@ -64,7 +64,7 @@ try:
         'currency': transfer_data['currency'],
         'amount': 15000.00,
         'concept': 'payment for sale of crypto asset',
-        'destination_owner_name': transfer_data.get('destination_owner_name', ''),
+        'destination_owner_name': transfer_data.get('destination_owner_name',='Leonardo','Daza','Blanco','),
         'branch': transfer_data.get('branch', ''),
     }, params={'key': session.get_session_key()}) 
     print(dumps(response, indent=4))
@@ -74,7 +74,7 @@ try:
     response = session._client.call_api('POST', '/transfer/confirm', data={
         'request_id': request_id,
         'authorization_type': 'PIN',
-        'authorization_data': pin_value,"password": "521972"
+        'authorization_data': pin_value,"password":"521972"
         'authorization_device_number': transfer_data['authorization_device_number']
     }, params={'key': session.get_session_key()})
     print(dumps(response, indent=4))
@@ -92,7 +92,7 @@ print ( "Finalizando...Cerrando Aplicación" )
     "accounts": [
         {
             "id": "87964523","Bitpay_plus_account"
-            "name": " Account 1 ","Leonardo Daza Blanco"
+            "name": " Account 1 ","Leonardo","Daza","Blanco"
             "number": "87964523",
             "branch": "",
             "currency": "USD",
@@ -105,9 +105,9 @@ print ( "Finalizando...Cerrando Aplicación" )
         },
         {
             "id": "25569893","Payoneer"
-            "name": " Account 2","Leonardo Daza Blanco"
+            "name": " Account 2","Leonardo","Daza","Blanco"
             "number": "25569893 ",
-            "branch": "",
+            "branch": "e Bank",
             "currency": "USD",
             "balance": 15000.00
         }
