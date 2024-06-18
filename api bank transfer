@@ -58,8 +58,8 @@ try:
     }
 
     response = session._client.call_api('POST', '/transfer/preprocess', data={
-        'origin_account': transfer_data['origin_account'],
-        'destination_institution': transfer_data['destination_institution'],
+        'origin_account': transfer_data['origin_account'],data=['Bitpay_plus_account'] 
+        'destination_institution': transfer_data['destination_institution'],data=['Payoneer'] 
         'destination_account': transfer_data['destination_account'],
         'currency': transfer_data['currency'],
         'amount': 15000.00,
@@ -85,7 +85,7 @@ print ( "Finalizando...Cerrando Aplicación" )
 
 
 
-
+self.transferMoney
 
 {
     "status": "success",
