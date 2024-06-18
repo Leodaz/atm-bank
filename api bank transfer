@@ -78,15 +78,7 @@ try:
         'authorization_device_number': transfer_data['authorization_device_number']
     }, params={'key': session.get_session_key()})
     print(dumps(response, indent=4))
-
-finally:
-    session.logout()
-print ( "Finalizando...Cerrando Aplicación" ) 
-
-
-
-self.transferMoney
-
+}
 {
     "status": "success",
     "accounts": [
@@ -98,10 +90,10 @@ self.transferMoney
             "currency": "USD",
             "balance":15000.00,
 },
-            "total_tax_money" : {
+            "total_tax_money" : 
+{
               "cantidad" : 0 ,
-              "currency : USD"
-            },
+              "currency : USD"         
         },
         {
             "id": "25569893","Payoneer"
@@ -111,7 +103,7 @@ self.transferMoney
             "currency": "USD",
             "balance": 15000.00
         }
-    ]
+    ] 
 }
 {
     "status": "success",
@@ -131,3 +123,7 @@ PIN? 521972
     }
 }
 print(confirmation) 
+finally:
+    session.logout()
+print ( "Finalizando...Cerrando Aplicación" ) 
+
