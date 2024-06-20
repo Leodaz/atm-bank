@@ -1,0 +1,43 @@
+from json import dumps
+
+API_KEY = "API-KEY"
+client = Client(API_KEY, environment="sandbox")
+
+
+credentials = {
+    "provider": "test",
+    "username": "12345otp",
+    "password": "asdfg"
+}
+
+session = client.banking.login(**credentials)
+print('session key:', session.get_session_key())
+print('status:', session.get_status())
+if session.get_status() == 'interaction_required':
+    print(session.get_interactive_context())
+    token = '8888'
+    response = session._client.call_api('POST', '/login/', params={
+        'key': session.get_session_key(),
+    }, data={
+        **credentials,
+        'otp': token
+    })
+    print(dumps(response, indent=4))
+
+try:
+    response = session._client.call_api("GET", "/account/", params={
+        "key": session.get_session_key(),
+    })
+    print(dumps(response, indent=4))
+
+    account_number = response["accounts"][0]["number"]
+    currency = response["accounts"][0]["currency"]
+    response = session._client.call_api("GET", f"/account/{account_number}/movement/", params={
+        "key": session.get_session_key(),
+        "currency": currency,
+        "date_start": "22/01/2022",
+        "date_end": "22/06/2024",
+    })
+    print(dumps(response, indent=4))
+finally:
+    session.logout()
