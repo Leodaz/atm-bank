@@ -9,6 +9,8 @@ import requests
 
 pip install key-generator
 from key_generator.key_generator import generate
+or 
+pip install python-keygen
 
 key = generate(seed = 101)
 print(key.get_key()) 
@@ -30,7 +32,7 @@ print(response.text)
 
 
 from json import dumps
-API_KEY = "<API-KEY>"
+API_KEY = "<API-KEY>"(700b868d-2aac-47b3-8d6d-c0c82c3af3a0)(-#22xx1972) 
 client = Client(API_KEY, environment="sandbox") 
 credentials = {
     "provider": "Bitpay_plus_account",
