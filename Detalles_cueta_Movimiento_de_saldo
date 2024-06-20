@@ -1,0 +1,562 @@
+ response = session._client.call_api('POST', '/login/', params={
+21
+        'key': session.get_session_key(),
+22
+    }, data={
+23
+        **credentials,
+24
+        'otp': token
+25
+    })
+26
+    print(dumps(response, indent=4))
+27
+​
+28
+try:
+29
+    response = session._client.call_api("GET", "/account/", params={
+30
+        "key": session.get_session_key(),
+31
+    })
+{
+    "status": "success",
+    "accounts": [
+        {
+            "id": "12345",
+            "name": "Test Account 1",
+            "number": "12345678",
+            "branch": "",
+            "currency": "USD",
+            "balance": 21000
+        },
+        {
+            "id": "12346",
+            "name": "Test Account 2",
+            "number": "87654321",
+            "branch": "",
+            "currency": "USD",
+            "balance": 12000
+        }
+    ]
+}
+{
+    "status": "success",
+    "movements": [
+        {
+            "id": "e79bcb165b921beddaba87aac8e21b42",
+            "reference": "ref 0",
+            "date": "22/01/2022",
+            "detail": "Supermercado Gama",
+            "debit": 95.23,"USD"
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "9215eb940faf756859ec42c2fd3a4763",
+            "reference": "ref 1",
+            "date": "22/01/2022",
+            "detail": "DEB.... Mac_Donald Sambil",
+            "debit": 48.17,"USD"
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "2fe63b420ea077da93ccff76becf1ca3",
+            "reference": "ref 2",
+            "date": "22/01/2022",
+            "detail": "HPE. PAGO COMPRA DE EQUIPOS Y ACCESORIOS",
+            "debit": "",
+            "credit": 481.69,
+            "extra_data": null
+        },
+        {
+            "id": "bf9e1a8f0c5f03e4934cbfb22c6e2d2d",
+            "reference": "ref 3",
+            "date": "22/01/2022",
+            "detail": "DEBITO INTERNO BT",
+            "debit": 13236.28,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "4db6bc8c08b45c85ae2aa256db10d284",
+            "reference": "ref 4",
+            "date": "22/01/2022",
+            "detail": "DEB. CAMBIOSST....875579",
+            "debit": 14616.76,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "98a04a2dd9f5e4eda004995200bab86d",
+            "reference": "ref 5",
+            "date": "22/02/2022",
+            "detail": "Maxi Donas Palos Grandes",
+            "debit": "",
+            "credit": 61.84,
+            "extra_data": null
+        },
+        {
+            "id": "fadb124e67d3c9cc2823eaa43c5c4059",
+            "reference": "ref 6",
+            "date": "22/02/2022",
+            "detail": "UBER UY SEP12 3FCX6",
+            "debit": 8.17,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "a0b3cd7b817eda365015b4b883d5d4af",
+            "reference": "ref 7",
+            "date": "02/03/2022",
+            "detail": "CRE. CAMBIOSOP....196861",
+            "debit": "",
+            "credit": 15030.05,
+            "extra_data": null
+        },
+        {
+            "id": "4ba45a87fbb0d8c4137764a7653f3695",
+            "reference": "ref 8",
+            "date": "22/04/2022",
+            "detail": "OPTICA-CARONI",
+            "debit": "",
+            "credit": 22.97,
+            "extra_data": null
+        },
+        {
+            "id": "bb6d3f740fc2c16528d31ff657ea4a17",
+            "reference": "ref 9",
+            "date": "22/01/2022",
+            "detail": "ANTEL MINUTOS",
+            "debit": 6889.78,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "65f0ffdef877052f55a9b71011edf972",
+            "reference": "ref 10",
+            "date": "22/01/2022",
+            "detail": "CINEX",
+            "debit": 5.7,"USD"
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "c32c64d7af066f74cdf6038324327d4f",
+            "reference": "ref 11",
+            "date": "22/01/2022",
+            "detail": "SAVOY CHOCOLATES",
+            "debit": 48.68,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "4a67b1b7f76cb6f07e7bfdbecadd4116",
+            "reference": "ref 48",
+            "date": "22/01/2022",
+            "detail": "PAGO DE Factura*6885D8919E9441FD8DD9*CANTV",
+            "debit": 49.41,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "43a1dac8aaf210c7d230b9793b24f416",
+            "reference": "ref 60",
+            "date": "22/01/2022",
+            "detail": "GOOGLE ADS*0761A2CAC08142E6829F",
+            "debit": 2349.41,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "caf3909843864627ce1cec6b354c0c9a",
+            "reference": "ref 12",
+            "date": "22/01/2022",
+            "detail": "GOOGLE ADS*975CD5A6C4CA45B29267",
+            "debit": 2349.41,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "93077f6f6e51de502803da6b3e768e13",
+            "reference": "ref 13",
+            "date": "22/01/2022",
+            "detail": "UBER UY JUN21 K4FLA",
+            "debit": 2.78,"USD"
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "ff32da495c03cdb5ae2bb644dbe1d7b5",
+            "reference": "ref 14",
+            "date": "22/01/2022",
+            "detail": "DEB. CAMBIOSST....879574",
+            "debit": 7641.46,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "949ce9efc02a241325fe17a29b2a4583",
+            "reference": "ref 15",
+            "date": "22/01/2022",
+            "detail": "DIGITEL*SERVICIOS",
+            "debit": 9.36,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "edb8106766a73a637ce92ef5e63ccd42",
+            "reference": "ref 16",
+            "date": "22/01/2022",
+            "detail": "PLASTICOS BALDIVIA MAEMONTEVID",
+            "debit": 2043.81,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "92e1e71b2e7dcda3f02fbf5618995806",
+            "reference": "ref 17",
+            "date": "22/01/2022",
+            "detail": "SUELDOS 380803TT RECIBIDA /SISTEMAS GLOBALES URUGUAY S.",
+            "debit": "",
+            "credit": 9383.44,
+            "extra_data": null
+        },
+        {
+            "id": "cc79b53c4d35ad06b1fe23977ff9e1f7",
+            "reference": "ref 18",
+            "date": "22/01/2022",
+            "detail": "DEB. CAMBIOSST....309277",
+            "debit": 2012.13,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "6a7ee630fd8a7e8c94400da0be2cbc52",
+            "reference": "ref 19",
+            "date": "22/01/2022",
+            "detail": "DEB. CAMBIOSST....079384",
+            "debit": 9724.68,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "da404f3493b081ac4c102f95a5bb0d3b",
+            "reference": "ref 20",
+            "date": "22/01/2022",
+            "detail": "DEB. CAMBIOSST....368576",
+            "debit": 3772.44,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "1f274fda1d480a175748fc3cb27f4a85",
+            "reference": "ref 21",
+            "date": "22/01/2022",
+            "detail": "COBRO CUOTA PRESTAMO AMORTIZABLE 650041822079 CUO: 020",
+            "debit": 5450.96,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "5532800e13a549f37d624f8913b4b979",
+            "reference": "ref 22",
+            "date": "22/01/2022",
+            "detail": "UBER UY AUG04 T6XYZ HELP.",
+            "debit": 12359.5,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "7b4e95866a12d6794a16b9a4fb03a83b",
+            "reference": "ref 23",
+            "date": "22/01/2022",
+            "detail": "SUPERMARKET EL DORADO FARO JOS",
+            "debit": 7384.62,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "6fa228d31213b827260b5ecfc95db111",
+            "reference": "ref 24",
+            "date": "22/01/2022",
+            "detail": "GUASACACA",
+            "debit": 4274.36,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "d9822591b5d7b0d6aad4a12f9b592e23",
+            "reference": "ref 25",
+            "date": "22/01/2022",
+            "detail": "MANGO BAJITO",
+            "debit": 25.00,"USD"
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "cf69efd7c3266cb5d9b0be2b3c149de0",
+            "reference": "ref 26",
+            "date": "22/01/2022",
+            "detail": "DEB. CAMBIOSST....992604",
+            "debit": 12953.45,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "bb92bf5b59eb80d0b3e486f1ace160a0",
+            "reference": "ref 27",
+            "date": "22/01/2022",
+            "detail": "DEB. CAMBIOSST....295486",
+            "debit": 6068.62,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "c89ddd3822faf988bf9398b9bd66816e",
+            "reference": "ref 28",
+            "date": "22/01/2022",
+            "detail": "DEB. CAMBIOSCOMI..781775",
+            "debit": 653.92,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "7b240d6de55e22f80d0e1041ef286160",
+            "reference": "ref 29",
+            "date": "22/01/2022",
+            "detail": "DEB. CAMBIOSST....973624",
+            "debit": 2085.56,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "4c2d8ec2f5d1685a09819c20710e380d",
+            "reference": "ref 30",
+            "date": "22/01/2022",
+            "detail": "GNP",
+            "debit": 14488.16,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "b2207df63a374193bd27612f99922e26",
+            "reference": "ref 31",
+            "date": "22/01/2022",
+            "detail": "DEB. CAMBIOSST....199381",
+            "debit": 13580.53,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "c62772f8c839f2ded2113c95a7bb0acb",
+            "reference": "ref 32",
+            "date": "22/01/2022",
+            "detail": "UBER UY JUL16 5NXLG",
+            "debit": 5445.44,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "0c4224f0e25b76df6dd3bd299bff7bba",
+            "reference": "ref 33",
+            "date": "22/01/2022",
+            "detail": "CRE. CAMBIOSOP....871654",
+            "debit": "",
+            "credit": 19188.56,
+            "extra_data": null
+        },
+        {
+            "id": "180ecc9000de6a978effdc11507d9631",
+            "reference": "ref 34",
+            "date": "22/01/2022",
+            "detail": "DEB. CAMBIOSST....057903",
+            "debit": 551.7,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "8ebc0187ed9914ad4121f0b82e97079d",
+            "reference": "ref 35",
+            "date": "22/01/2022",
+            "detail": "CR. PAGO SUELDOS 20180620_1541200 TATA SOCIEDAD ANONIMA",
+            "debit": "",
+            "credit": 12105.73,
+            "extra_data": null
+        },
+        {
+            "id": "0689a6d2a68ad7ec71a3207d45c821d8",
+            "reference": "ref 36",
+            "date": "22/01/2022",
+            "detail": "DEB. CAMBIOSST....403459",
+            "debit": 41.63,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "52df2197fad06b49459fe9383f75e42a",
+            "reference": "ref 37",
+            "date": "22/01/2022",
+            "detail": "UBER TRIP 3FNEI HELP.UBER",
+            "debit": 4258.84,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "f5ae1cf3a613eed9d1418df3719cf48e",
+            "reference": "ref 38",
+            "date": "22/01/2022",
+            "detail": "UBER TRIP THTA6 HELP.UBER",
+            "debit": 1036.3,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "c68651da12b3e6785851be66a6f601cf",
+            "reference": "ref 39",
+            "date": "22/01/2022",
+            "detail": "RETIRO BANRED DISPENSADOR 960008TRX:320273 SUC:27 DISP:29 4/78603 TARJ:XX0538",
+            "debit": 12915.35,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "2c8d657c7a9499dd979589562534e02a",
+            "reference": "ref 40",
+            "date": "22/01/2022",
+            "detail": "REV.IVA19210FRESCOMAR",
+            "debit": 5426.18,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "87a106c6ac7d3d5f89a5a725f0c3938b",
+            "reference": "ref 41",
+            "date": "22/01/2022",
+            "detail": "CR. PAGO SUELDOS 20170830_2744489 RECURSOS HUMANOS",
+            "debit": "",
+            "credit": 18405.77,
+            "extra_data": null
+        },
+        {
+            "id": "c6c2d7d5ab982ac6c9ddfc0353b2c5aa",
+            "reference": "ref 42",
+            "date": "22/01/2022",
+            "detail": "UBER 4PL4A HELP.UBER",
+            "debit": 14143.63,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "425e1cc40cd3879b2483923868d8f8f4",
+            "reference": "ref 43",
+            "date": "22/01/2022",
+            "detail": "DEB. CAMBIOSCOMI..823868",
+            "debit": 3512.59,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "7fe00a2ba48a33eca5abf390aa459d0c",
+            "reference": "ref 44",
+            "date": "22/01/2022",
+            "detail": "DEB. CAMBIOSST....249336",
+            "debit": 1381.81,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "de6ecf7377ed45fc2aee233071f39196",
+            "reference": "ref 45",
+            "date": "22/01/2022",
+            "detail": "CELLULAR CENTER CUOTA 01/02",
+            "debit": 12675.48,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "63d8fe16c28b419154eb51512ea16218",
+            "reference": "ref 46",
+            "date": "22/01/2022",
+            "detail": "DEB. CAMBIOSST....146788",
+            "debit": 2556.68,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "9d06903eb55414c3dff3d6cd6915f883",
+            "reference": "ref 47",
+            "date": "22/01/2022",
+            "detail": "DEB. CAMBIOSST....427690",
+            "debit": 3684.87,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "a4a5d7e704d95cab8e091d263b3fea1e",
+            "reference": "ref 48",
+            "date": "22/01/2022",
+            "detail": "UBER TRIP VLVCE HELP",
+            "debit": 6140.33,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "c1ec25c24b2ace12cbeaa76a29ca175b",
+            "reference": "ref 49",
+            "date": "22/01/2022",
+            "detail": "AISP - LOJA B5 LAST MI",
+            "debit": 9170.68,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "80560455a227c5b54d02459c4201c879",
+            "reference": "ref 50",
+            "date": "22/01/2022",
+            "detail": "COLLAGE",
+            "debit": 5032.04,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "90879f46945742971fc22b43ad2df797",
+            "reference": "ref 51",
+            "date": "22/01/2022",
+            "detail": "COBRO CUOTA PRESTAMO AMORTIZABLE 500040039360 CUO: 007",
+            "debit": 11614.04,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "4f68416ed18dae4d147863c009306cd5",
+            "reference": "ref 52",
+            "date": "22/01/2022",
+            "detail": "DEB.CONTRATO3100362 008",
+            "debit": 13881.81,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "e151a7514eda4c0366845316fd2bafa4",
+            "reference": "ref 53",
+            "date": "22/01/2022",
+            "detail": "COBRO CUOTA PRESTAMO AMORTIZABLE 650042662849 CUO: 007",
+            "debit": 8254.04,
+            "credit": "",
+            "extra_data": null
+        },
+        {
+            "id": "f6363a2c9084c5199510403e6c80daa6",
+            "reference": "ref 54",
+            "date": "22/01/2022",
+            "detail": "DEB. CAMBIOSST....693831",
+            "debit": 11116.52,
+            "credit": "",
+            "extra_data": null
+        }
+    ]
+}
