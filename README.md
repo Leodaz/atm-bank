@@ -1,3 +1,10 @@
+Este repositorio esta bajo Registro y su codificación fue realizado por Leonardo Daza Blanco y la Div. de Servicios Empresariales de HPE
+
+la copia y/o traslado de este código no se puede realizar sin previa autorización incluyendo para practicas académicas y No es de libre uso por favor No lo copien sin autorización Previa Gracias 
+
+
+
+
 usar la version pyATM 0.0.1
 https://pypi.org/project/pyATM/
 pip install pyATM
