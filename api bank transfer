@@ -54,9 +54,10 @@ try:
     transfer_data = {
         'origin_account': account_number,'87964523 ','Bitpay_plus_account'
         'destination_account': '25569893 ',
-        'destination_institution': '25569893','Payoneer_account'
+        'destination_institution': '25569893','Payoneer_account' ,'Country','US','First Century Bank','4019893800998','Leonardo Daza Blanco', 'type account','CHECKING', '1731 N Elm St  Commerce, GA 30529 USA'
+    (,'01050011740011554878','Bank_Mercantil','VE','type account','saving'             ) 
         'authorization_device_number': '01',
-        'currency': 'USD',
+        'currency': 'USD','currency': 'Bsd'
     }
 
     response = session._client.call_api('POST', '/transfer/preprocess', data={
